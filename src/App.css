@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+
+li{
+  display: flex;
+  height: 100px;
+}
+
+li button{
+  margin-top: 15px;
+  height: 70%;
+}
+
+
+li p{
+  text-align:left;
+  width: 200px;
+  border: 1px solid black;
+  padding-left: 10px;
+  transition-duration: 0.3s;
+}
+
+li p:hover{
+  background: #d4d4d4;
+}
+
+li p.completed{
+  text-decoration: line-through;
+}
+
