@@ -12,16 +12,38 @@ function List(props){
           }
   }
 
-  function handlerClick(e) {
-      if(e.target.className){
-        e.target.className ='';
-      }else{
-         e.target.className ='completed';
-      }
+  function handlerClick(pers) {
+        let array = people;
+        if(pers.class){
+
+          array.forEach((item)=>{
+            if(item.id === pers.id){
+              item.class='';
+              item.check=false;
+            }
+            props.setPeople([...array])
+          })
+
+        }else{
+
+          array.forEach((item)=>{
+            if(item.id === pers.id){
+              item.class='completed';
+              item.check= true;
+            }
+            props.setPeople([...array])
+          })
+
+        }
+
+      
   }
 
+
+
   let listItems = people.map(person =>
-    <li key={person.id} onClick={handlerClick}>
+    <li className={person.class} key={person.id}  >
+        <input type="checkbox" checked={person.check} onClick={()=>handlerClick(person)}/>
         <p>{person.p}</p>
         <button onClick={deleteClick(person.id)}>X</button>
     </li>

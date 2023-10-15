@@ -8,9 +8,12 @@ function Input(props){
 	}
 
 	function addClick(){
+		
 	    let obg = {
 	       p: newList,
-	       id: people.length+1
+	       id: people.length+1,
+	       check: false,
+    	   class: ''
 	    }
 	    props.setPeople([...people, obg])
 	  }
