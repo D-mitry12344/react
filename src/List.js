@@ -12,43 +12,40 @@ function List(props){
           }
   }
 
-  function handlerClick(pers) {
-        let array = people;
-        if(pers.class){
 
+  function handlerClick(pers) {
+    let array = people;
+    
+        if(pers.pick){
           array.forEach((item)=>{
             if(item.id === pers.id){
-              item.class='';
-              item.check=false;
+              item.pick=false;
             }
             props.setPeople([...array])
           })
-
+          
         }else{
 
           array.forEach((item)=>{
             if(item.id === pers.id){
-              item.class='completed';
-              item.check= true;
+              item.pick= true;
             }
             props.setPeople([...array])
           })
-
         }
 
-      
   }
 
 
 
   let listItems = people.map(person =>
-    <li className={person.class} key={person.id}  >
-        <input type="checkbox" checked={person.check} onClick={()=>handlerClick(person)}/>
+    <li className={person.check ? 'completed' : ''} key={person.id}  >
+        <input type="checkbox" checked={person.pick} onClick={()=>handlerClick(person)}/>
         <p>{person.p}</p>
         <button onClick={deleteClick(person.id)}>X</button>
     </li>
   );
-  return <ul>{listItems}</ul>
+  return <ul className="lists">{listItems}</ul>
 }
 
 export default List;

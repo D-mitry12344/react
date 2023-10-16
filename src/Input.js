@@ -8,18 +8,20 @@ function Input(props){
 	}
 
 	function addClick(){
-		
-	    let obg = {
-	       p: newList,
-	       id: people.length+1,
-	       check: false,
-    	   class: ''
-	    }
-	    props.setPeople([...people, obg])
+		if(newList !== '' && newList !== ' '){
+			let obg = {
+		       p: newList,
+		       id: people.length+1,
+		       check: false,
+		       pick: false,
+	    	   class: ''
+		    }
+		    props.setPeople([...people, obg])
+		}
 	  }
 
 	return(
-		<div>
+		<div className='add-new-item'>
 			<input onChange={changeInput} type="text"/>
         	<button onClick={addClick}>ADD</button>
         </div>

@@ -8,16 +8,19 @@ function App() {
   const [people, setPeople] = useState([{
     p:'123', id:1,
     check: false,
+    pick: false,
     class: ''
   },{
     p:'123', id:2 ,
     check: false,
+    pick: false,
     class: ''
   }]);
+
   return (
     <div className="App">
       <Input people={people} setPeople={setPeople} />
-      <List people={people} setPeople={setPeople} />
+      <List  people={people} setPeople={setPeople} />
       <DeleteList people={people} setPeople={setPeople} />
     </div>
   );
