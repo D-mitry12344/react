@@ -5,17 +5,23 @@ import List from './List';
 import Input from './Input';
 import DeleteList from './DeleteList';
 function App() {
-  const [people, setPeople] = useState(JSON.parse(localStorage.getItem("lists")));
-  /*[{
-    p:'123', id:1,
-    pick: false,
-    class: ''
-  },{
-    p:'123', id:2 ,
-    pick: false,
-    class: ''
-  }])*/ 
-
+  const [people, setPeople] = useState([]);
+  let listStorage=JSON.parse(localStorage.getItem("lists"))
+  if(listStorage){
+    setPeople(listStorage);
+  }else{
+    localStorage.setItem("lists",people)
+    let array=[{
+      p:'Написать декларацию независимости', id:1,
+      pick: false,
+      class: ''
+    },{
+      p:'Убрать за котом', id:2 ,
+      pick: false,
+      class: ''
+    }];
+    setPeople(array)
+  }
 
 
   localStorage.setItem("lists", JSON.stringify(people));
