@@ -29,6 +29,7 @@ body{
     width: 100%;
     height: 100%;
     padding-top: 20px;
+    transition-duration: 0.3s;
 }
 
 .App {
@@ -39,6 +40,8 @@ body{
   border: 50px solid #faae61;
   border-top: 100px solid #faae61;
   border-bottom: 100px solid #faae61;
+  border-radius: 2%;
+  transition-duration: 0.3s;
 }
 
 
@@ -51,6 +54,7 @@ body{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  transition-duration: 0.3s;
   
 }
 
@@ -62,8 +66,7 @@ body{
 
 .lists li p{
   width: 300px;
-  border: 3px solid #ba8147;
-  border-radius: 10px;
+  border-bottom: 3px solid #ba8147;
   min-height: 35px;
   margin-top: 13px;
   text-align: center;
@@ -72,11 +75,11 @@ body{
   margin-left: auto;
   color: #ba8147;
   transition-duration: 0.3s;
+  overflow: auto;
 }
 
 .lists li input{
   background: #d6cba7;
-  border: 1px #a39a7a;
   color: #1a170e;
   font-weight: 700;
   text-shadow: 0 5px 10px #000;
@@ -93,8 +96,9 @@ body{
 .lists li.completed p{
   text-decoration: line-through;
   color: #573f27;
-  border: 3px solid #573f27;
+  border-bottom: 3px solid #573f27;
 }
+
 
 .btns-global{
   display: flex;
@@ -112,8 +116,8 @@ body{
 
 .btns-global button{
   border: 3px solid #faae61;
-  border-radius: 10%;
-  color: #ba8147;
+  border-radius: 3%;
+  color: #ba2156;
   font-weight: 700;
   width: 200px;
   margin: 0 auto;
@@ -121,6 +125,10 @@ body{
   background: none;
   text-align: center;
   transition-duration: 0.3s;
+  border-top: 1px solid #faae61;
+  border-bottom: 3px solid #faae61;
+  border-left: 1px solid #faae61;
+  border-right: 1px solid #faae61;
 }
 
 .btns-global button:hover,
@@ -144,8 +152,8 @@ body{
 .add-new-item img,
 .btns-global img{
   width: 100px;
-  bottom: 0px;
-  right: 10px;
+  bottom: -20px;
+  right: -10px;
   position: absolute;
 }
 
@@ -162,13 +170,17 @@ body{
 
 .add-new-item input{
   width: 460px;
-  height: 60px;
+  height: 40px;
   font-weight: 500;
   font-size: 16px;
   margin: 0 auto;
   margin-top: 15px;
+  padding: 0;
   padding-left: 10px;
-  border: 3px solid #faae61;
+  border: none;
+  text-shadow: 0 2px 5px rgb(0,0,0,0.1);
+  background: linear-gradient(#fff, #fff, #fff,rgb(0,0,0,0.1) );
+  border-bottom: 3px solid #faae61;
   transition-duration: 0.3s;
   color: #8a643e;
 }
@@ -183,34 +195,28 @@ body{
   color: #ba8147;
   text-shadow: none;
   box-shadow: none;
-  border: 3px solid #faae61;
-  border-radius: 10px;
-  font-size: 20px;
+  border-top: 1px solid #faae61;
+  border-bottom: 3px solid #faae61;
+  border-left: 1px solid #faae61;
+  border-right: 1px solid #faae61;
+  border-radius: 5px;
+  font-size: 14px;
   width: 200px;
-  height: 70px;
+  height: 40px;
   margin: 0 auto;
   margin-top: 13px;
 }
 
-.lists li button{
-  margin-top: 7px;
-  margin-right: 50px;
-  margin-left: auto;
-  height: 40px;
-  width: 50px;
-  font-size: 30px;
-  color: #9c2a3b;
-  text-shadow: none;
-  border: none;
-  background: none;
-  box-shadow: none;
-  transition-duration: 0.3s;
-}
+.lists li img{
+    margin-top: 13px;
+    margin-right: 50px;
+    margin-left: auto;
+    width: 50px;
+    transition-duration: 0.3s;
+  }
 
-.lists li button:hover{
-  font-size: 34px;
-  color: #e84159;
-  text-shadow: 0 5px 5px #a4a4a4;
+.lists li img:hover{
+  transform: rotate(180deg);
 }
 
 @media (max-width: 600px){
@@ -220,7 +226,7 @@ body{
   }
 
   #root{
-    padding-top: 20px;
+    padding-top: 0px;
   }
 
   .App {
@@ -228,6 +234,8 @@ body{
     border: 30px solid #faae61;
     border-top: 70px solid #faae61;
     border-bottom: 70px solid #faae61;
+    border-radius: 0;
+    padding-bottom: 100%;
   }
 
 
@@ -297,25 +305,7 @@ body{
     font-size: 15px;
   }
 
-  .lists li button{
-    margin-top: 13px;
-    margin-right: 10px;
-    margin-left: auto;
-    height: 40px;
-    width: 50px;
-    font-size: 25px;
-    color: #9c2a3b;
-    text-shadow: none;
-    border: none;
-    background: none;
-    box-shadow: none;
-    transition-duration: 0.3s;
+  .lists li img{
+    margin-right: 0px;
   }
-
-  .lists li button:hover{
-    font-size: 30px;
-    color: #e84159;
-    text-shadow: 0 5px 5px #a4a4a4;
-  }
-
 }

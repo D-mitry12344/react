@@ -24,7 +24,7 @@ function Input(props){
 		<div className='add-new-item'>
 			<img src={flowers} />
 			<input onChange={changeInput} type="text"/>
-        	<button onClick={addClick}>Добавить задачу</button>
+        	<button onClick={addClick}>Добавить</button>
         	<img src={flowers} />
         </div>
       )

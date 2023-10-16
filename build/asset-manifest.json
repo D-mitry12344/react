@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react/build/static/css/main.880aec78.css",
-    "main.js": "/react/build/static/js/main.d86d90be.js",
+    "main.css": "/react/build/static/css/main.bb37f634.css",
+    "main.js": "/react/build/static/js/main.b328094b.js",
     "static/js/787.28cb0dcd.chunk.js": "/react/build/static/js/787.28cb0dcd.chunk.js",
     "static/media/YahooC-Bold.otf": "/react/build/static/media/YahooC-Bold.7625bf11119969567492.otf",
     "static/media/flowers.webp": "/react/build/static/media/flowers.476ff8a3e15bfd5fc2c8.webp",
     "static/media/logo.svg": "/react/build/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/react/build/index.html",
-    "main.880aec78.css.map": "/react/build/static/css/main.880aec78.css.map",
-    "main.d86d90be.js.map": "/react/build/static/js/main.d86d90be.js.map",
+    "main.bb37f634.css.map": "/react/build/static/css/main.bb37f634.css.map",
+    "main.b328094b.js.map": "/react/build/static/js/main.b328094b.js.map",
     "787.28cb0dcd.chunk.js.map": "/react/build/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.880aec78.css",
-    "static/js/main.d86d90be.js"
+    "static/css/main.bb37f634.css",
+    "static/js/main.b328094b.js"
   ]
 }
