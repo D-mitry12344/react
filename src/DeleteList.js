@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import flowers from './flowers.webp';
 
 function DeleteList(props){
 	const people = props.people;
@@ -44,12 +43,35 @@ function DeleteList(props){
 		
 	}
 
+	function checkItem(){
+		if(check){
+			let array = people
+			array.forEach((item)=>{
+				if(item.pick){item.check= false;
+					setCheck(false)
+				}
+		        props.setPeople([...array])
+
+		     })
+		}else{
+			let array = people
+			array.forEach((item)=>{
+				if(item.pick){
+					item.check= true;
+					setCheck(true)
+				}
+		        props.setPeople([...array])
+		     })
+		}
+		
+	}
+
 	return(
 			<div className='btns-global' >
-	        	<button onClick={deleteItem}>Удалить выполненные</button>
-	        	<button onClick={pickAllItem}>Все выоплнить</button>
-	        	<img src={flowers} />
-	        </div>	
+	        	<button onClick={deleteItem}>Delete Pick</button>
+	        	<button onClick={pickAllItem}>All Pick</button>
+	        	<button onClick={checkItem}>Check Pick</button>
+	        </div>
       )
 }
 

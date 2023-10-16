@@ -7,10 +7,12 @@ import DeleteList from './DeleteList';
 function App() {
   const [people, setPeople] = useState([{
     p:'123', id:1,
+    check: false,
     pick: false,
     class: ''
   },{
     p:'123', id:2 ,
+    check: false,
     pick: false,
     class: ''
   }]);

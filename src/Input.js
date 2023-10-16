@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import flowers from './flowers.webp';
 
 function Input(props){
 	const people = props.people
@@ -13,6 +12,7 @@ function Input(props){
 			let obg = {
 		       p: newList,
 		       id: people.length+1,
+		       check: false,
 		       pick: false,
 	    	   class: ''
 		    }
@@ -22,10 +22,8 @@ function Input(props){
 
 	return(
 		<div className='add-new-item'>
-			<img src={flowers} />
 			<input onChange={changeInput} type="text"/>
-        	<button onClick={addClick}>Добавить задачу</button>
-        	<img src={flowers} />
+        	<button onClick={addClick}>ADD</button>
         </div>
       )
 }
