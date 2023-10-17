@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import flowers from './flowers.webp';
 
 function DeleteList(props){
 	const people = props.people;
@@ -48,7 +47,6 @@ function DeleteList(props){
 			<div className='btns-global' >
 	        	<button onClick={deleteItem}>Удалить выполненные</button>
 	        	<button onClick={pickAllItem}>Все выполнить</button>
-	        	<img src={flowers} />
 	        </div>	
       )
 }

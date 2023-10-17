@@ -30,16 +30,17 @@ body{
     height: 100%;
     padding-top: 20px;
     transition-duration: 0.3s;
+    background: #feca76;
 }
 
 .App {
   text-align: center;
-  width: 600px;
+  width: 1000px;
   margin: 0 auto;
   padding-top: 60px;
-  border: 50px solid #faae61;
-  border-top: 100px solid #faae61;
-  border-bottom: 100px solid #faae61;
+  border: 50px solid #feca76;
+  border-top: 100px solid #feca76;
+  border-bottom: 100px solid #feca76;
   border-radius: 2%;
   transition-duration: 0.3s;
 }
@@ -47,12 +48,13 @@ body{
 
 .lists{
   padding: 0;
-  width: 600px;
+  width: 1000px;
   max-height: 400px;
   overflow: auto;
   overflow-x: hidden;
   margin: 0 auto;
   display: flex;
+  background: #fff;
   flex-wrap: wrap;
   transition-duration: 0.3s;
   
@@ -60,12 +62,13 @@ body{
 
 .lists li{
   display: flex;
-  width: 600px;
+  width: 1000px;
   margin: 10px 0;
+  position: relative;
 }
 
 .lists li p{
-  width: 300px;
+  width: 750px;
   border-bottom: 3px solid #ba8147;
   min-height: 35px;
   margin-top: 13px;
@@ -73,7 +76,7 @@ body{
   padding-top: 5px;
   margin-right: auto;
   margin-left: auto;
-  color: #ba8147;
+  color: #77402b;
   transition-duration: 0.3s;
   overflow: auto;
 }
@@ -92,6 +95,43 @@ body{
   transition-duration: 0.3s;
 }
 
+.lists li input {
+  z-index: 10;
+  opacity: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 70px;
+}
+
+.custom-checkbox+label {
+  position: absolute;
+  left: 70px;
+  top: 20px;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox+label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 3px solid #a69271;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  transition-duration: 0.3s;
+}
+.custom-checkbox:checked+label::before {
+  border-color: #a69271;
+  background-color: #feca76;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
 
 .lists li.completed p{
   text-decoration: line-through;
@@ -103,21 +143,22 @@ body{
 .btns-global{
   display: flex;
   flex-wrap: wrap;
-  width: 600px;
+  width: 1000px;
+  background: #fff;
   margin: 0 auto;
   transition-duration: 0.3s;
   opacity: 1;
-  margin-top: 30px;
+  padding-top: 30px;
   margin-bottom: -53px;
   border-bottom: 60px solid #fff;
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
   position: relative;
 }
 
 .btns-global button{
-  border: 3px solid #faae61;
-  border-radius: 3%;
-  color: #ba2156;
+  border: 1px solid #faae61;
+  border-radius: 10px;
+  color: #77402b;
   font-weight: 700;
   width: 200px;
   margin: 0 auto;
@@ -125,64 +166,61 @@ body{
   background: none;
   text-align: center;
   transition-duration: 0.3s;
-  border-top: 1px solid #faae61;
-  border-bottom: 3px solid #faae61;
-  border-left: 1px solid #faae61;
-  border-right: 1px solid #faae61;
 }
 
 .btns-global button:hover,
 .add-new-item button:hover{
-  transform: scale(1.1);
-  box-shadow: 0 5px 5px 5px #d4d4d4;
+  background: #feca76;
 }
 
 .add-new-item{
-  width: 600px;
+  width: 1000px;
+  background: #fff;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: -103px;
   border-top: 60px solid #fff;
-  border-radius: 50px;
+  border-radius: 50px 50px 0 0;
   position: relative;
+  padding-bottom: 40px;
 }
 
+.add-new-item h1{
+  width: 100%;
+  text-align: center;
+  color: #77402b;
+}
 
-.add-new-item img,
-.btns-global img{
-  width: 100px;
-  bottom: -20px;
-  right: -10px;
+.add-new-item div{
+  width: 100%;
+}
+
+.add-new-item img{
+  right: 20px;
+  top: -60px;
   position: absolute;
 }
 
-.btns-global img{
-  bottom: -80px;
-  right: -10px;
-}
-
-.add-new-item img:first-child{
-  top: -60px;
-  left: 10px;
-  transform: scale(-1,-1);
-}
 
 .add-new-item input{
-  width: 460px;
+  width: 730px;
   height: 40px;
   font-weight: 500;
   font-size: 16px;
   margin: 0 auto;
-  margin-top: 15px;
-  padding: 0;
   padding-left: 10px;
+  margin-left: 00px;
   border: none;
-  text-shadow: 0 2px 5px rgb(0,0,0,0.1);
-  background: linear-gradient(#fff, #fff, #fff,rgb(0,0,0,0.1) );
+  text-align: center;
   border-bottom: 3px solid #faae61;
   transition-duration: 0.3s;
-  color: #8a643e;
+  color: #77402b;
+}
+
+.add-new-item input::placeholder{
+  color: #77402b;
+  opacity: 0.6;
 }
 
 .add-new-item input:focus{
@@ -192,25 +230,23 @@ body{
 .add-new-item button{
   transition-duration: 0.3s;
   background: none;
-  color: #ba8147;
+  color: #77402b;
   text-shadow: none;
   box-shadow: none;
-  border-top: 1px solid #faae61;
-  border-bottom: 3px solid #faae61;
-  border-left: 1px solid #faae61;
-  border-right: 1px solid #faae61;
-  border-radius: 5px;
+  border: 1px solid #faae61;
+  border-radius: 10px;
   font-size: 14px;
   width: 200px;
   height: 40px;
   margin: 0 auto;
   margin-top: 13px;
+  margin-left: 60px;
 }
 
 .lists li img{
-    margin-top: 13px;
+    margin-top: 7px;
     margin-right: 50px;
-    margin-left: auto;
+    margin-left: 0;
     width: 50px;
     height: 59px;
     transition-duration: 0.3s;
@@ -228,15 +264,11 @@ body{
 
   #root{
     padding-top: 0px;
+    width: 360px;
   }
 
   .App {
     width: 360px;
-    border: 30px solid #faae61;
-    border-top: 70px solid #faae61;
-    border-bottom: 70px solid #faae61;
-    border-radius: 0;
-    padding-bottom: 100%;
   }
 
 
@@ -249,18 +281,20 @@ body{
   }
 
   .lists li p{
-    width: 200px;
+    width: 300px;
   }
 
   .lists li input{
     margin-left: 20px;
   }
 
+  .custom-checkbox+label {
+    left: 20px;
+
+  }
+
   .btns-global{
     width: 360px;
-    margin-bottom: -40px;
-    border-bottom: 45px solid #fff;
-    border-radius: 50px;
   }
 
   .btns-global button{
@@ -270,8 +304,7 @@ body{
 
   .btns-global button:hover,
   .add-new-item button:hover{
-    transform: scale(1.1);
-    box-shadow: 0 5px 5px 5px #d4d4d4;
+    background: #feca76;
   }
 
   .add-new-item{
@@ -281,21 +314,12 @@ body{
   }
 
 
-  .add-new-item img,
-  .btns-global img{
+  .add-new-item img{
     width: 70px;
-    bottom: 0px;
+    top: 20px;
     right: 0px;
   }
 
-  .btns-global img{
-    bottom: -50px;
-    right: -20px;
-  }
-
-  .add-new-item img:first-child{
-    top: -50px;
-  }
 
   .add-new-item input{
     width: 300px;
@@ -304,6 +328,7 @@ body{
 
   .add-new-item button{
     font-size: 15px;
+    margin-left: 20px;
   }
 
   .lists li img{

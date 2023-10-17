@@ -41,7 +41,8 @@ function List(props){
 
   let listItems = people.map(person =>
     <li className={person.pick ? 'completed' : ''} key={person.id}  >
-        <input type="checkbox" checked={person.pick} onClick={()=>handlerClick(person)}/>
+        <input className="custom-checkbox" name="happy" type="checkbox" checked={person.pick} onClick={()=>handlerClick(person)}/>
+        <label  for="happy" className="checkmark"></label>
         <p>{person.p}</p>
         <img src={deleteBtn} onClick={deleteClick(person.id)} />
     </li>

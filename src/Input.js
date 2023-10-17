@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import flowers from './flowers.webp';
+import flowers from './bottle.png';
 
 function Input(props){
 	const people = props.people
@@ -22,10 +22,12 @@ function Input(props){
 
 	return(
 		<div className='add-new-item'>
-			<img src={flowers} />
-			<input onChange={changeInput} type="text"/>
-        	<button onClick={addClick}>Добавить</button>
-        	<img src={flowers} />
+			<h1>Список задач</h1>
+			<div>
+					<input placeholder='Написать задачу' onChange={changeInput} type="text"/>
+					<img src={flowers} />
+        			<button onClick={addClick}>Добавить</button>
+        	</div>
         </div>
       )
 }
