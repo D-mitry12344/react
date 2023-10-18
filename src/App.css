@@ -187,9 +187,14 @@ body{
 }
 
 .add-new-item h1{
-  width: 100%;
+  width: 300px;
+  border: 3px solid #ba8147;
   text-align: center;
   color: #77402b;
+  border-radius: 10px;
+  margin-left: 130px;
+  margin-top: 30px;
+  margin-bottom: 60px;
 }
 
 .add-new-item div{
@@ -197,8 +202,8 @@ body{
 }
 
 .add-new-item img{
-  right: 20px;
-  top: -60px;
+  right: 140px;
+  top: -70px;
   position: absolute;
 }
 
@@ -213,7 +218,7 @@ body{
   margin-left: 00px;
   border: none;
   text-align: center;
-  border-bottom: 3px solid #faae61;
+  border-bottom: 3px solid #ba8147;
   transition-duration: 0.3s;
   color: #77402b;
 }
